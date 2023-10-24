@@ -1,0 +1,39 @@
+/* Aquest fitxer CSS servirà per definit els estils dels dos fitxers HTML, mitjançant l'external CSS.*/
+/* En tot el fons de les pàgines li apliquem un color sòlid diferent al blanc i utilitzem una font escollida diferent al de per defecte del navegador. */
+body {
+    background-color: rgb(255, 243, 132);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Amb l'ús dels selectors class, li apliquem a les entrades de text curt i email una amplada de 100px. */
+.formNoms,.formEmail {
+    width: 300px;
+}
+/* A l'entrada numèrica li apliquem un altre amplada de 100px amb l'ús del selector identificador o id. */
+#formNum {
+    width: 100px;
+}
+/* Als dos botons de les dues pàgines li apliquem una mida mitjana amb el selector identificador (id), posem un color de fons sòlid personalitzat, un redondeix de les cantonades de manera radial de 4px, li apliquem el negreta a la font i un temps de velocitat de transició al passar el cursor per sobre d'ells que canviarà l'estil dels botons amb :hover. */
+#button {
+    font-size: medium;
+    background-color: rgb(218, 114, 24);
+    border-radius: 4px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+/* Després aquí apliquem la funció de que al passar el cursor per sobre dels botons amb :hover, transformi el color del fons dels botons en un altre i la lletra del text també. */
+#button:hover {
+    background-color: rgb(255, 169, 93);
+    color:rgb(133, 62, 0)
+}
+/* Aquí li diem que els focus que els hi fa a tots els inputs, tipus text, email i númeric, torni el fons a un altre color. */
+input:focus {
+    background-color: rgb(255, 227, 202);
+}
+/* Fem el mateix de que es torna el fons del textarea en un altre color al estar en aquest element del formulari amb l'identificador #formsTemesExtra. */
+#formTemesExtra:focus {
+    background-color: rgb(255, 227, 202);
+}
+/* Inclus hem volgut aplicar color al fons de l'element selector per homogenitzar la pàgina amb l'identificador #mesosSuscripcio, ja que estavem jugant amb els estils. */
+#Suscripcio:focus {
+    background-color: rgb(255, 227, 202);
+}

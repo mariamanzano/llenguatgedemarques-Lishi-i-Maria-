@@ -1,0 +1,22 @@
+<!--Li diu al navegador que el códic està en HTML5.-->
+<!DOCTYPE html>
+<!--L'html és el root del document i amb l'ús de lang definim el language del contingut de la pàgina.-->
+<html lang="es">
+    <!--En el head, conté metadates d'informació general, el joc de caràcters meta charset="UTF-8" que ajuda al navegador a mostrar el text com toca, el títol de la pestanya i el "Link rel" que enllaça al document extern (estils_fitxershtml.css) anomenat external CSS, que servirà per definit l'estil dels elements d'aquest document.-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario enviado</title>
+        <link rel="stylesheet" href="estils_fitxershtml.css">
+    </head>
+    <body>
+        <h1>¡Formulario enviado!</h1>
+    <!--L'element form ens ajudarà a implementar els inputs i les entrades que ens interessi per demanar dades de l'usuari, a més amb action li posarem l'enllaç d'una direcció un cop finalitzi el formulari amb el botó que te la funcionalitat de submit i que només es viable un cop completant tots els camps requerits com a obligatoris, sinó, no deixa enviar el formulari.-->
+    <form action="formulari.html">
+        <div>
+            <label for="button">Retrocede al formulario</label><br>
+            <!--Utilitzarem el type submit en el input enlloc del type button perquè a banda de ser més adient el submit, si posem el type button, l'enllaç que hem definit en action no funcionaria i s'hauria de vincular un enllaç al propi botó i no al formulari, per tant, si fos button, podríes anar a l'enllaç sense completar el formulari necessariament, i ens interessa que acabi el formulari per poder redirigir al fitxer formulari_enviat.html, sinó, no et deixarà, a aquest input li posarem un identificador, el type submit y un valor que ocuparà el botó.-->
+            <input id="button" type="submit" value="Volver">
+        </div>
+    </form>    
+    </body>
+</html>

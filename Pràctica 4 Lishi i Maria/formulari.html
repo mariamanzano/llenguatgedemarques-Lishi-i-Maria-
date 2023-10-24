@@ -1,0 +1,74 @@
+<!--Li diu al navegador que el códic està en HTML5.-->
+<!DOCTYPE html>
+<!--L'html és el root del document i amb l'ús de lang definim el language del contingut de la pàgina.-->
+<html lang="es">
+    <!--En el head, conté metadates d'informació general, el joc de caràcters meta charset="UTF-8" que ajuda al navegador a mostrar el text com toca, el títol de la pestanya i el "Link rel" que enllaça al document extern (estils_fitxershtml.css) anomenat external CSS, que servirà per definit l'estil dels elements d'aquest document.-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="estils_fitxershtml.css">
+    </head>
+    <body>
+        <h1>¡Suscríbete!</h1>
+        <h2>Para no perderte de todas las novedades del apasionante mundo de los videojuegos, rellena este formulario</h2>
+    <!--L'element form ens ajudarà a implementar els inputs i les entrades que ens interessi per demanar dades de l'usuari, a més amb action li posarem l'enllaç d'una direcció un cop finalitzi el formulari amb el botó que te la funcionalitat de submit i que només es viable un cop completant tots els camps requerits com a obligatoris, sinó, no deixa enviar el formulari.-->
+    <form action="formulari_enviat.html">
+        <!--L'element label ens crea una etiqueta, on està el text, l'element input és on l'usuari marca el preguntat i estàn associades gracies a la id i el for (que ha de ser el mateix).-->
+        <div><br>
+            <label for="formNoms">Nombre y apellidos:</label>
+            <!--L'element class ens serveix per poder personalitzar l'input, amb el type="text" decidim que la forma del input sigui una entrada de text curta, name en serveix per agrupar el label i el input i l'element required serveix per fer obligatoria aquesta pregunta-->
+            <input class="formNoms" id="formNoms" type="text" name="formNoms" required> 
+        </div>
+        <div><br>
+            <label for="formEmail">Correo electrónico:</label>
+            <!--Aqui el type="email" fa que el input sigui una entrada de text on obligatoriament hi hagi un arroba-->
+            <input class="formEmail" id="formEmail" type="email" name="formEmail" required> 
+        </div>
+        <div><br>
+            <label for="formNum">Número de teléfono:</label>
+            <!--Aqui el type="number" fa que el input sigui una entrada numérica-->
+            <input id="formNum" type="number" name="formNum" required> 
+        </div>
+        <div><br>
+            <p>¿Cuál es tu rango de edad?</p>
+            <!--Aqui el input es en forma de radio button, i amb name els agrupem tots, aixo fa que nomes poguem selecionar una opció-->
+            <!--El paràmetre checked serveix per que una opció estigui predeterminada-->
+            <input id="formEdat3" type="radio" name="edat" checked="checked">
+            <label for="formEdat3"> +18 años</label><br>
+            <input id="formEdat2" type="radio" name="edat">
+            <label for="formEdat2"> 13-17 años</label><br>
+            <input id="formEdat1" type="radio" name="edat">
+            <label for="formEdat1"> 3-12 años</label><br>
+        </div><br>
+        <div>
+            <!--Aqui el input es en forma de checkbox, i amb name els agrupem tots-->
+            <p>¿Qué temas te interesan? </p>
+            <input id="formInteressos1" type="checkbox" name="interessos" checked="checked">
+            <label for="formInteressos1"> Nuevos lanzamientos</label><br>
+            <input id="formInteressos2" type="checkbox" name="interessos">
+            <label for="formInteressos2"> Información</label><br>
+            <input id="formInteressos3" type="checkbox" name="interessos">
+            <label for="formInteressos3"> Videoconsolas</label><br>
+        </div><br>
+        <div>
+            <label for="formTemesExtra">¿Además de lo temas ya mencionados, tienes alguno más?</label><br><br>
+            <!--textrea serveix per fer una entrada de text llarga, amb rows i cols decidim el tamany i el placeholder posa un text indicatiu que li diu al usuari el que ha de emplenar en l'element textarea, a més de ser un requisit.-->
+            <textarea id="formTemesExtra" name="comentaris" rows="4" cols="30" placeholder="Escribe tus temas de interés..." required></textarea>
+        </div><br>
+        <div>
+            <label for="Suscripcio">¿Cuántos meses quieres suscribirte?</label><br>
+            <!--El select serveix per fer un desplegable, les options seràn les opcions d'aquest-->
+            <select id="Suscripcio">
+                <option>3 meses</option>
+                <option>6 meses</option>
+                <option>12 meses</option>
+            </select>
+        </div><br>
+        <div>
+            <label for="button">Clica a enviar para suscribirte</label><br><br>
+            <!--Utilitzarem el type submit en el input enlloc del type button perquè a banda de ser més adient el submit, si posem el type button, l'enllaç que hem definit en action no funcionaria i s'hauria de vincular un enllaç al propi botó i no al formulari, per tant, si fos button, podríes anar a l'enllaç sense completar el formulari necessariament, i ens interessa que acabi el formulari per poder redirigir al fitxer formulari_enviat.html, sinó, no et deixarà, a aquest input li posarem un identificador, el type submit y un valor que ocuparà el botó.-->
+            <input id="button" type="submit" value="Enviar" required>              
+        </div>
+    </form>
+    </body>
+</html>
