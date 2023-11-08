@@ -1,0 +1,43 @@
+/* Ajustem body fins que no té ni margin ni padding, perque ocupi tota la part visual del la pàgina i volem aplicarli els estils més endevant fins al límit. */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+/* Color de text blanc, amb el mateix pading per els dos costats de la capçalera i una posició fixa que sempre es mantindrà inamovible enganxat a dalt de tot. */
+header {
+    color: white;
+    padding-left: 48.5%;
+    padding-right: 48.5%;
+    position: fixed;
+    top: 0px
+}
+/* A nav li apliquem un color de fons fosc, text centrat en blanc, amb un pading d'1% amb posició sticky que un cop fem scroll es quedi fix mentres el fons es desplaça per sota*/
+nav {
+    background-color: #4d4d63;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    position: sticky;
+    top: 13%;
+}
+/* A la part principal que es mostren el contingut i seccions, li demanem una posicio per defecte, amb un top de 100 px i un padding cap endins d'un 10% */
+main {
+    position: static;
+    top: 100px;
+    padding: 10%;
+    margin-top: 0%;
+}
+/* A les 3 seccions li apliquem la mateixa classe, on tenen el mateix color de fons, text centrat amb un margin i pading adequat */
+.seccio {
+    background-color: rgb(201, 219, 213);
+    text-align: center;
+    text-align: top;
+    padding: 5%;
+    margin: 15%;
+}
+/* Apliquem el mateix color de fons, centrem la lletra amb una altura de 15vh*/
+header, footer {
+    text-align: center;
+    background-color: #4d4d63;
+    height: 15vh;
+}
